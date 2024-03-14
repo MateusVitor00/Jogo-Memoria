@@ -12,7 +12,7 @@ let secondCard = false;
 
 
 const items = [
-    {name: "Artur", image: "images/Artur/artur-01.jpg" },
+    {name: "Artur", image: "images/artur/artur-01.JPG" },
     {name: "Dentinho", image: "images/dentinho/dentinho-01.jpg" },
     {name: "Eduardo", image: "images/eduardo/eduardo-01.jpg" },
     {name: "Gabi", image: "images/gabi/gabi-01.jpg" },
