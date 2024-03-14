@@ -13,13 +13,13 @@ let secondCard = false;
 
 const items = [
     {name: "Artur", image: "images/artur/artur-01.JPG" },
-    {name: "Dentinho", image: "images/dentinho/dentinho-01.jpg" },
-    {name: "Eduardo", image: "images/eduardo/eduardo-01.jpg" },
-    {name: "Gabi", image: "images/gabi/gabi-01.jpg" },
-    {name: "Gustavo", image: "images/gustavo/gustavo-01.jpg" },
-    {name: "Luan", image: "images/luan/luan-01.jpg" },
-    {name: "Luisa", image: "images/luisa/luisa-01.jpg" },
-    {name: "Malu", image: "images/malu/malu-01.jpg" },
+    {name: "Dentinho", image: "images/dentinho/dentinho-01.JPG" },
+    {name: "Eduardo", image: "images/eduardo/eduardo-01.JPG" },
+    {name: "Gabi", image: "images/gabi/gabi-01.JPG" },
+    {name: "Gustavo", image: "images/gustavo/gustavo-01.JPG" },
+    {name: "Luan", image: "images/luan/luan-01.JPG" },
+    {name: "Luisa", image: "images/luisa/luisa-01.JPG" },
+    {name: "Malu", image: "images/malu/malu-01.JPG" },
 ];
 
 //contador
