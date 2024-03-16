@@ -6,20 +6,19 @@
 }
 
 body{
-    background-color: rgb(82, 194, 13);
+    background-image: url(fundo.png);
+    background-size: cover;
 }
 
 .wrapper{
     box-sizing: content-box;
-    width: 36.87em;
+    width: 10.87em;
     padding: 2.5em 2.5em;
-    background-color: white;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 0.6em;
-    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.25);
 }
 
 .game-container{
@@ -38,8 +37,8 @@ body{
 
 .card-container{
     position: relative;
-    width: 6.25em;
-    height: 6.25em;
+    width: 8.25em;
+    height: 7.25em;
     cursor: pointer;
 
 }
@@ -79,7 +78,8 @@ body{
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: rgb(82, 194, 13);
+    background-image: url(fundo.png);
+    background-size: cover;
     top: 0;
 }
 
@@ -115,6 +115,14 @@ button{
     margin: 0.6em 0 1em 0;
 }
 .image{
-    width: 6em;
-    height: 6em;
+    width: 8em;
+    height: 7em;
+}
+.logo{
+    width: 3.5em;
+    height: 2em;
+}
+
+#rodape{
+    
 }
