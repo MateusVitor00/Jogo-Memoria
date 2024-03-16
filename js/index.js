@@ -32,16 +32,15 @@ let movesCount = 0,
 const timeGenerator = () => {
     seconds += 1
     //minutes logic
-    if(seconds = 60){
-        minutes = 1;
+    if(seconds >= 60){
+        minutes += 1;
         seconds = 0;
     }
     //formatação do tempo depois de reproduzida
 let secondsValues = seconds < 10 ? `0${seconds}` : seconds;
 let minutesValues = minutes < 10 ? `0${minutes}` : minutes;
 timeValue.innerHTML = `<span>Tempo: </span>
-${minutesValues}:
-${secondsValues}
+${minutesValues}:${secondsValues}
 `;
 };
 
@@ -84,7 +83,7 @@ const matrixGenerator = (cardValues, size = 4) =>{
         gameContainer.innerHTML += `
         <div class="card-container" data-card-value="${
         cardValues[i].name}">
-            <div class="card-before">?</div>
+            <div class="card-before"> <img src="images/logo-cmi.png" class ="logo"alt="LOGO"></div>
             <div class="card-after">
             <img src="${cardValues[i].image}" class="image"/></
             div>
@@ -134,51 +133,46 @@ cards.forEach((card) =>{
                     let delay = setTimeout(() =>{
                         tempFirst.classList.remove("flipped");
                         tempSecond.classList.remove("flipped")
-                    }, 500);
-                }
+                    }, 900);
+                }            
               }
         }
         
-        });
+      });
     });
 };
 
 
 //start game
-startButton.addEventListener("click", () =>{
+startButton.addEventListener("click", () => {
     movesCount = 0;
-    time = 0;
-
-    controls.classList.add("hide"),
+    seconds = 0;
+    minutes = 0;
+    //controls amd buttons visibility
+    controls.classList.add("hide");
     stopButton.classList.remove("hide");
-    startButton.classList("hide");
-    //start timer
+    startButton.classList.add("hide");
+    //Start timer
     interval = setInterval(timeGenerator, 1000);
-
-    moves.innerHTML = `<span>Moves: </span> 
-    ${movesCount}`;
-
-    inicializer();
-});
-
-//stop game
-stopButton.addEventListener("click", (stopGame = () =>{
-    controls.classList.remove("hide");
-    stopButton.classList.add("hide");
-    startButton.classList.remove("hide");
-    clearInterval(interval);
-
-}))
-
-//inicializar valores
-const inicializer = () =>{
+    //initial moves
+    moves.innerHTML = `<span>Movimentos:</span> ${movesCount}`;
+    initializer();
+  });
+  //Stop game
+  stopButton.addEventListener(
+    "click",
+    (stopGame = () => {
+      controls.classList.remove("hide");
+      stopButton.classList.add("hide");
+      startButton.classList.remove("hide");
+      clearInterval(interval);
+    })
+  );
+  //Initialize values and func calls
+  const initializer = () => {
     result.innerText = "";
     winCount = 0;
     let cardValues = generateRandom();
-    console.log(cardValues); 
-    matrixGenerator(cardValues)
-}
-
-inicializer("");
-
-
+    console.log(cardValues);
+    matrixGenerator(cardValues);
+  };
