@@ -83,7 +83,7 @@ const matrixGenerator = (cardValues, size = 4) =>{
         gameContainer.innerHTML += `
         <div class="card-container" data-card-value="${
         cardValues[i].name}">
-            <div class="card-before"> <img src="images/logo-cmi.png" class ="logo"alt="LOGO"></div>
+            <div class="card-before"> <img src="images/Logo-cmi.png" class ="logo"alt="logo"></div>
             <div class="card-after">
             <img src="${cardValues[i].image}" class="image"/></
             div>
